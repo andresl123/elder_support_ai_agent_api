@@ -24,4 +24,4 @@ jobs:
       run: docker buildx create --use
 
     - name: Build the Docker image and push to repo
-      run: docker buildx build . --file Dockerfile --platform linux/arm64 --tag ${{ secrets.DOCKER_HUB_USERNAME }}/ai-elder-care-agent --push
+      run: docker buildx build . --file Dockerfile --platform linux/arm64 --tag ${{ secrets.DOCKER_HUB_USERNAME }}/ai-elder-care-agent:1 --push
