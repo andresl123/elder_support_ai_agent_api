@@ -2,7 +2,7 @@ from google.adk.agents import Agent, LlmAgent
 from google.adk.models.lite_llm import LiteLlm
 
 ollama_llm = LiteLlm(
-    model="ollama/llama3.2:3b",                  # local model name
+    model="ollama/phi4:14b",                  # local model name
     base_url="http://192.168.1.110:11434", # endpoint for Ollama server
     temperature=0.7,
 )

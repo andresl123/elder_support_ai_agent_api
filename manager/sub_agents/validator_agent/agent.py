@@ -2,7 +2,7 @@ from google.adk.agents import Agent, LlmAgent
 from google.adk.models.lite_llm import LiteLlm
 
 ollama_llm = LiteLlm(
-    model="ollama/llama3.2:3b",                  # local model name
+    model="ollama/phi4:14b",                  # local model name
     base_url="http://192.168.1.110:11434", # endpoint for Ollama server
     temperature=0.7,
 )
@@ -39,6 +39,7 @@ Required fields to extract and check:
 Instructions:
 1. Parse the input paragraph and extract only the fields explicitly mentioned.
 2. Compare the extracted fields to the required list above.
+3 . The value is considered invalid only if it is empty.
 3. Output ONLY 'valid' or 'invalid' with a single reason if invalid.
     Example valid output: 'valid'
     Example invalid output: 'invalid: missing contact information'
