@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-elder-care-agent-deployment
+  labels:
+    app: ai-elder-care-agent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ai-elder-care-agent
+  template:
+    metadata:
+      labels:
+        app: ai-elder-care-agent
+    spec:
+      containers:
+      - name: ai-elder-care-agent
+        image: {{ .Values.image }}
